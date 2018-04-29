@@ -682,6 +682,7 @@
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+    margin: 0 auto;
 }
 .c-role .title .tab .tab1{
     width: 70px;
