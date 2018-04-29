@@ -681,6 +681,7 @@
 .c-role .title .tab span{
     position: relative;
     top: 50%;
+    margin: 0 auto;
     transform: translateY(-50%);
 }
 .c-role .title .tab .tab1{
