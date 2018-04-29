@@ -1,0 +1,1685 @@
+@charset "UTF-8";
+/**
+ *
+ * @authors Your Name (you@example.org)
+ * @date    2018-04-20 16:45:18
+ * @version $Id$
+ */
+/*start header*/
+#header{
+    position: relative;
+    width: 100%;
+    height: 628px;
+    background: url('../img/index/main_banner.jpg') no-repeat top center/cover;
+}
+.h-nav{
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    transition: background-color .5s;
+    min-width: 1400px;
+    z-index: 999;
+}
+.scroll{
+    background-color: rgba(255,255,255,.8);
+}
+.hover{
+    background: rgba(255,255,255,.8);
+}
+/* start menu 菜单导航 */
+.menu{
+    float: right;
+    margin-right: 40px;
+    margin-left: 4px;
+    line-height: 100px;
+}
+.menu li{
+    display: inline-block;
+    margin-left: -4px;
+    padding: 0 20px;
+}
+.menu li.havehide:after{
+    display: none;
+    content: '';
+    width: 0;
+    height: 0;
+    margin: -20px auto 0;
+    border: 10px solid #e1ebeb;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+.menu li.line{
+    display: inline-block;
+    width: 15px;
+    height: 25px;
+    padding: 0;
+    background-position: 16px 116px;
+    vertical-align: middle;
+}
+.menu li a{
+    display: block;
+}
+.menu li:hover a{
+    color: #cc4336;
+}
+.menu li.havehide:hover:after{
+    display: block;
+}
+/*start 导航下拉隐藏层*/
+.ulhide{
+    display: none;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background-color: #e1ebeb;
+}
+.ulhide .hide{
+    display: none;
+    width: inherit;
+    height: inherit;
+}
+.ulhide .hide li{
+    position: relative;
+    top: 40px;
+    float: right;
+    width: 215px;
+    border-left: 1px solid #ccc;
+    text-align: center;
+}
+.ulhide .hide li:last-child{
+    border-left: transparent;
+}
+.ulhide .hide li a{
+    display: block;
+    transform: translateY(0px);
+    transition: transform .5s;
+}
+.ulhide .hide li i{
+    display: block;
+    margin: 0 auto;
+}
+.ulhide .hide li i.i1{
+    width: 65px;
+    height: 71px;
+    background-position: 158px -230px;
+}
+.ulhide .hide li i.i2{
+    width: 70px;
+    height: 70px;
+    background-position: 158px -301px;
+}
+.ulhide .hide li p{
+    padding-top: 10px;
+    line-height: 35px;
+}
+.ulhide .hide li:hover a{
+    transform: translateY(-20px);
+}
+/*start logo、二维码*/
+.logo{
+    display: none;
+    float: left;
+    height: inherit;
+}
+.logo-list{
+    display: inline-block;
+    vertical-align: middle;
+}
+.logo-left{
+    height: inherit;
+    padding-right: 12px;
+}
+.logo-left p{
+    display: inline-block;
+    width: 14px;
+    padding: 10px 12px;
+    font-size: 14px;
+}
+.logo-left img{
+    display: inline-block;
+    width: auto;
+    height: 100%;
+    margin-left: -5px;
+    padding: 13px 0;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+.logo-right{
+    height: 73px;
+    margin-left: -5px;
+    border-left: 1px solid #999;
+}
+.logo-right i.img{
+    display: inline-block;
+    width: 73px;
+    height: inherit;
+    margin: 0 15px;
+    background-position: 158px -157px;
+}
+.logo-right h3,
+.logo-right p{
+    white-space: nowrap;
+}
+.logo-right h3{
+    font-size: 30px;
+    font-weight: bold;
+}
+/*start h-logo*/
+.h-logo{
+    position: absolute;
+    top: 40px;
+    left: -70px;
+    width: 70px;
+    height: 199px;
+    background: url('../img/index/logo.png') no-repeat;
+    opacity: 0;
+    transform: scale(1);
+    transition: transform .3s,opacity 1s,left 1s;
+}
+.h-logo.scale{
+    transform: scale(0);
+}
+/*start h-role*/
+.h-role{
+    position: relative;
+    width: 1105px;
+    height: 584px;
+    margin: 0 auto;
+    user-select: none;
+}
+.h-role .role{
+    position: absolute;
+    bottom: 2px;
+    opacity: 1;
+    transition: left .6s,opacity .6s;
+}
+.h-role .role.hide{
+    opacity: 0;
+}
+.h-role .role1.hide,
+.h-role .role2.hide{
+    left: 150px;
+}
+.h-role .role3.hide,
+.h-role .role4.hide{
+    left: 117px;
+}
+.h-role .role1{
+    left: 20px;
+    width: 437px;
+    height: 537px;
+    background: url('../img/index/role/role1.png') no-repeat;
+}
+.h-role .role2{
+    left: 319px;
+    width: 423px;
+    height: 544px;
+    background: url('../img/index/role/role2.png') no-repeat;
+}
+.h-role .role3{
+    left: 0;
+    width: 491px;
+    height: 583px;
+    background: url('../img/index/role/role3.png') no-repeat;
+    z-index: 1;
+}
+.h-role .role4{
+    left: 234px;
+    width: 503px;
+    height: 501px;
+    background: url('../img/index/role/role4.png') no-repeat;
+}
+.h-role i.btn{
+    position: absolute;
+    top: 290px;
+    left: 800px;
+    width: 41px;
+    height: 66px;
+    background-position: 158px -439px;
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform .5s;
+}
+.h-role i.btn:hover{
+    transform: scale(1.15);
+}
+.h-role .imgBottom{
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    z-index: 2;
+}
+/*start server*/
+.server{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 90px;
+    height: 105px;
+    z-index: 3;
+}
+.server a{
+    display: inline-block;
+    width: inherit;
+    height: inherit;
+}
+.server img{
+    width: inherit;
+    height: inherit;
+}
+
+/*start content*/
+.c-main{
+    position: relative;
+    width: 1400px;
+    margin: 0 auto;
+}
+/*start slide*/
+.slide{
+    position: absolute;
+    top: -209px;
+    right: -63px;
+    width: 514px;
+    height: 1100px;
+    background: url('../img/index/side_bg.png');
+    z-index: 22;
+}
+.slide .title{
+    position: absolute;
+    top: -20px;
+    left: 30px;
+    width: 312px;
+    height: 170px;
+    background-position: -587px -853px;
+}
+.slide .arrow{
+    position: absolute;
+    top: 63px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: 5px solid #fccc00;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+}
+/*start download*/
+.slide .download{
+    position: absolute;
+    top: 43px;
+    right: 514px;
+    width: 23px;
+    height: 106px;
+    padding: 5px;
+    border: 5px solid #fdde00;
+    border-right: none;
+    border-radius: 10px 0 0 10px;
+    background-color: #fccc00;
+    overflow: hidden;
+    transition: width .5s;
+}
+.slide .download.change{
+    width: 380px;
+}
+.slide .download .show{
+    display: none;
+    width: 23px;
+    height: 106px;
+    background-position: 231px -613px;
+    cursor: pointer;
+}
+.slide .download .downloadMain{
+    width: 380px;
+    height: inherit;
+}
+.slide .download .downloadMain .close{
+    float: left;
+    width: 22px;
+    height: 22px;
+    background-position: 106px -621px;
+    cursor: pointer;
+}
+.slide .download .downloadMain .bg{
+    float: left;
+    width: 43px;
+    height: 100%;
+    margin-left: 5px;
+    background-position: 207px -615px;
+}
+.slide .download .downloadMain .qrcode{
+    float: left;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin-left: 5px;
+    padding: 4px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.slide .download .downloadMain .qrcode img.qr{
+    width: inherit;
+    height: inherit;
+}
+.slide .download .downloadMain .qrcode img.line{
+    position: absolute;
+    top: 4px;
+    left: 1px;
+    animation: dropdown 2s linear infinite;
+}
+/*start downLink*/
+.slide .download .downLink{
+    float: left;
+    width: 171px;
+    margin-left: 5px;
+}
+.slide .download .downLink a{
+    width: 100%;
+    height: 51px;
+    padding-bottom: 5px;
+}
+.slide .download .downLink a.ios{
+    background-position: -759px -608px;
+}
+.slide .download .downLink a.android{
+    background-position: -651px 80px;
+}
+/*start side-bar*/
+.side-bar{
+    position: relative;
+    top: 145px;
+}
+.side-bar li{
+    position: absolute;
+    top: 0;
+    left: 27px;
+    width: 321px;
+    height: 98px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: height .5s,left .5s;
+}
+.side-bar li.list-01{
+    width: 314px;
+    background-position: -661px -1045px;
+}
+.side-bar li.list-02{
+    top: 105px;
+    left: 0;
+    height: 88px;
+    background-position: -618px 256px;
+}
+.side-bar li.list-03{
+    top: 194px;
+    width: 306px;
+    height: 93px;
+    background-position: -307px 257px;
+}
+.side-bar li.list-04{
+    top: 286px;
+    width: 293px;
+    height: 97px;
+    background-position: -302px 362px;
+}
+.side-bar li.list-05{
+    top: 385px;
+    width: 314px;
+    height: 131px;
+    background-position: -330px 503px;
+    z-index: 1;
+}
+.side-bar li.list-06{
+    top: 467px;
+    left: 16px;
+    width: 304px;
+    height: 97px;
+    background-position: -4px 259px;
+}
+.side-bar li.list-07{
+    top: 560px;
+    width: 309px;
+    height: 103px;
+    background-position: 478px 669px;
+}
+.side-bar li.list-08{
+    top: 658px;
+    left: 10px;
+    width: 305px;
+    height: 94px;
+    background-position: 645px 360px;
+}
+.side-bar li.list-09{
+    top: 745px;
+    width: 304px;
+    height: 97px;
+    background-position: -595px 363px;
+}
+.side-bar li div.show{
+    position: absolute;
+    top: 51px;
+    left: 25px;
+    width: 190px;
+    height: 30px;
+    font-size: 13px;
+    line-height: 15px;
+}
+.side-bar li div.hide{
+    position: absolute;
+    top: 110px;
+    left: 25px;
+    width: 190px;
+    height: 30px;
+    font-size: 13px;
+    line-height: 15px;
+}
+.side-bar li:hover{
+    left: 40px;
+}
+.side-bar li.list-02:hover{
+    left: 10px;
+}
+.side-bar li.pos{
+    z-index: 2;
+}
+.side-bar li.list-01:hover{
+    height: 205px;
+}
+.side-bar li.list-01.pos{
+    background-position: -759px -5px;
+}
+@keyframes dropdown{
+    0%{top: 4px;opacity: 1;}
+    100%{top: 100px;opacity: .5;}
+}
+/*start new*/
+.new{
+    width: 940px;
+    height: 270px;
+}
+.new .banner{
+    float: left;
+    position: relative;
+    width: 360px;
+    height: inherit;
+    overflow: hidden;
+}
+.new .banner .img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500%;
+    height: inherit;
+}
+.new .banner .img li{
+    float: left;
+}
+.new .banner .tab{
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+.new .banner .tab span{
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin: 0 3px;
+    border: 3px solid #e37b63;
+    border-radius: 50%;
+    cursor: pointer;
+    vertical-align: bottom;
+}
+.new .banner .tab span.on{
+    background-color: #e37b63;
+}
+
+/*start newinfo*/
+.newinfo{
+    float: left;
+    width: 500px;
+    height: inherit;
+    margin-left: 35px;
+    overflow: hidden;
+}
+.newinfo .tab{
+    height: 45px;
+    border-bottom: 2px solid #000;
+}
+.newinfo .tab ul{
+    width: inherit;
+    height: inherit;
+}
+.newinfo .tab li{
+    float: left;
+    position: relative;
+    width: 92px;
+    height: inherit;
+}
+.newinfo .tab li span{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 76px;
+    height: 32px;
+    border-radius: 16px;
+    background-color: #68d7fc;
+    opacity: 0;
+    transition: .5s cubic-bezier(1,0,.67,.35);
+}
+.newinfo .tab li i{
+    position: absolute;
+    right: 16px;
+    bottom: 13px;
+    width: 45px;
+    height: 31px;
+}
+.newinfo .tab li.list-01 i{
+    background-position: 159px 405px;
+}
+.newinfo .tab li.list-02 i{
+    background-position: 159px 527px;
+}
+.newinfo .tab li.list-03 i{
+    height: 30px;
+    background-position: 159px 464px;
+}
+.newinfo .tab li.list-04 i{
+    height: 30px;
+    background-position: 159px 434px;
+}
+.newinfo .tab li.list-05 i{
+    height: 30px;
+    background-position: 159px 495px;
+}
+.newinfo .tab li em{
+    position: absolute;
+    top: 11px;
+    left: 2px;
+    width: 16px;
+    height: 29px;
+    background-position: 100px -508px;
+}
+.newinfo .tab li.on span{
+    bottom: 8px;
+    opacity: 1;
+}
+.newinfo .show{
+    position: relative;
+    width: 1000%;
+    height: 208px;
+    margin-top: 2px;
+    border-top: 1px solid #000;
+}
+.newinfo .show ul{
+    float: left;
+    width: 10%;
+    height: inherit;
+}
+.newinfo .show li{
+    height: 40px;
+    border-bottom: 1px dotted #333;
+    line-height: 40px;
+}
+.newinfo .show a{
+    float: left;
+    width: 400px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+}
+.newinfo .show span{
+    float: right;
+    font-size: 12px;
+}
+/*start role*/
+.c-role{
+    height: 611px;
+    margin-top: 37px;
+    background: url('../img/index/content/strategy_bg.jpg') no-repeat center 10px;
+}
+.c-role .title{
+    display: flex;
+    align-items: center;
+    height: 95px;
+    margin-bottom: 10px;
+    margin-left: 100px;
+}
+.c-role .title .bg{
+    width: 130px;
+    height: 69px;
+    background-position: -411px -587px;
+}
+.c-role .title .dotted{
+    width: 44px;
+    height: 4px;
+    margin: 0 10px;
+    background-position: -1422px -153px;
+    vertical-align: middle;
+}
+.c-role .title .tab{
+    position: relative;
+    width: 96px;
+    height: 90px;
+    background-position: -1422px -153px;
+    vertical-align: top;
+    text-align: center;
+    cursor: pointer;
+}
+.c-role .title .tab i{
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: 619px 258px;
+    opacity: 0;
+    transition: top .5s,opacity .5s;
+}
+.c-role .title .tab span{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.c-role .title .tab .tab1{
+    width: 70px;
+    height: 33px;
+    background-position: 158px -865px;
+}
+.c-role .title .tab .tab2{
+    width: 65px;
+    height: 36px;
+    background-position: 80px 117px;
+}
+.c-role .title .tab.active i,
+.c-role .title .tab:hover i{
+    top: 2px;
+    opacity: 1;
+}
+/*start showRole*/
+.showRole{
+    width: 840px;
+    height: 350px;
+    margin-left: 100px;
+}
+.showRole .list{
+    position: relative;
+    width: inherit;
+    height: inherit;
+}
+.showRole .list .list-bar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    opacity: 0;
+    transition: opacity .5s;
+}
+.showRole .list .formula-bar{
+    height: 29px;
+    margin-top: 40px;
+    padding: 13px 0;
+    border-bottom: 1px dotted #333;
+    font-size: 18px;
+    line-height: 29px;
+}
+.showRole .list .formula-tab{
+    float: left;
+}
+.showRole .list .formula-tab a{
+    margin: 0 15px;
+    font-weight: bold;
+}
+.showRole .list .formula-tab a.on,
+.showRole .list .formula-tab a:hover{
+    color: #cea441;
+}
+.showRole .list .btn-viewAll{
+    float: left;
+    width: 131px;
+    height: 29px;
+    padding-left: 15px;
+    background: url('../img/index/content/viewAll_btn.png') no-repeat right;
+}
+.showRole .list .list-bar.show{
+    opacity: 1;
+    z-index: 1;
+}
+/*start formula-item*/
+.formula-item{
+    position: relative;
+    width: inherit;
+    height: 205px;
+    margin-top: 30px;
+}
+.formula-all{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    opacity: 0;
+}
+.formula-all.show{
+    opacity: 1;
+    z-index: 1;
+}
+.formula-slide{
+    width: 780px;
+    height: 205px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.formula-item ul{
+    width: 1000%;
+    height: inherit;
+    transition: margin-left 1s;
+}
+.formula-item li{
+    float: left;
+    width: 89px;
+    margin-right: 24px;
+    padding: 5px 24px 0 0;
+    border-right: 1px solid #95a7a4;
+}
+.formula-item .formula-box{
+    position: relative;
+    width: inherit;
+    height: 92px;
+    margin-bottom: 14px;
+    border-radius: 100%;
+    background: #fff;
+    text-align: center;
+    cursor: pointer;
+}
+.formula-item .formula-box img{
+    position: absolute;
+    top: 0;right: 0;
+    bottom: 0;left: 0;
+    width: 82px;
+    height: 82px;
+    margin: auto;
+    border: 2px solid #ccc;
+    border-radius: 100%;
+}
+.formula-item .formula-box .cover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,.5);
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    opacity: 0;
+}
+.formula-item .formula-box .cover span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 14px;
+    line-height: 15px;
+    transform: translate(-50%,-50%);
+}
+.formula-item .formula-box .new{
+    position: absolute;
+    top: 0;
+    right: -7px;
+    width: 31px;
+    height: 36px;
+    background: url(../img/index/content/shishen/new_icon.png);
+}
+.formula-item .formula-box:hover .cover{
+    opacity: 1;
+}
+.formula-item .btn{
+    position: absolute;
+    top: 50%;
+    width: 43px;
+    height: 33px;
+    transform: translateY(-50%);
+}
+.formula-item .prev{
+    left: 0;
+    background-position: 159px -832px;
+}
+.formula-item .next{
+    right: 0;
+    background-position: 159px -931px;
+}
+/*start lead*/
+.lead .tab{
+    float: left;
+    width: 150px;
+    height: 250px;
+    margin-top: 38px;
+}
+.lead .tab ul li{
+    position: relative;
+    width: 138px;
+    height: 35px;
+    margin: 22px 0;
+    border: 2px solid #FFF;
+    font-size: 18px;
+    text-align: center;
+    line-height: 35px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.lead .tab ul li i{
+    opacity: 0;
+    position: absolute;
+    right: -15px;
+    top: 12px;
+    width: 0;
+    height: 0;
+    border: 5px solid #000;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    transition: .2s;
+}
+.lead .tab ul li:hover,.lead .tab ul li.active{
+    background: #fff;
+    border-color: #000;
+}
+.lead .tab ul li:hover i,.lead .tab ul li.active i{
+    opacity: 1;
+}
+.lead .pic{
+    float: left;
+    position: relative;
+    width: 656px;
+    height: 100%;
+    margin-left: 20px;
+}
+.lead .pic>ul{
+    width: 100%;
+    height: 100%;
+}
+.lead .pic>ul>li{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.lead .pic .img{
+    float: left;
+    position: relative;
+    width: 380px;
+    height: 100%;
+}
+.lead .pic .img img{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.lead .pic .dec{
+    float: right;
+    width: 230px;
+    height: 250px;
+    margin-top: 80px;
+}
+.lead .pic .dec p.index{
+    width: 38px;
+    height: 23px;
+    background-image: url("../img/index/index.png");
+}
+.lead .pic .qm .dec p.index{
+    background-position: 120px 351px;
+}
+.lead .pic .sl .dec p.index{
+    background-position: 158px 374px;
+}
+.lead .pic .yby .dec p.index{
+    background-position: 120px 374px;
+}
+.lead .pic .bqn .dec p.index{
+    background-position: 158px 351px;
+}
+.lead .pic .dec p.name{
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 10px;
+    border-bottom: 2px solid #000;
+}
+.lead .pic .dec p.info{
+    margin-top: 3px;
+    border-top: 1px solid #000;
+    font-size: 13px;
+    color: #222;
+    line-height: 25px;
+}
+/*start strategy*/
+.c-strategy{
+    width: 1200px;
+    height: 510px;
+    margin: -50px auto 0;
+}
+.leftPart{
+    float: left;
+    width: 376px;
+}
+.search{
+    height: 58px;
+}
+.search input{
+    width: 316px;
+    height: 40px;
+    border: 2px solid #000;
+    border-right: none;
+    text-indent: 15px;
+}
+.search .sBtn{
+    display: inline-block;
+    width: 58px;
+    height: 58px;
+    margin-left: -5px;
+    background-image: url(../img/index/index.png);
+    background-position: 158px -563px;
+    vertical-align: bottom;
+    cursor: pointer;
+}
+/*start ban-box*/
+.ban-box{
+    width: 368px;
+    height: 430px;
+    margin-top: 18px;
+    border: 2px solid #000;
+}
+.ban-box .banner{
+    position: relative;
+    height: 263px;
+    overflow: hidden;
+}
+.ban-box .banner .img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1000%;
+    height: 228px;
+}
+.ban-box .banner .img li{
+    float: left;
+    width: 10%;
+    height: 100%;
+}
+.ban-box .banner .tab{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+}
+.ban-box .banner .tab span{
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin: 0 3px;
+    border: 4px solid #000;
+    border-radius: 50%;
+    cursor: pointer;
+    vertical-align: bottom;
+}
+.ban-box .banner .tab span.on{
+    background-color: #000;
+}
+/*start navLink*/
+.navLink{
+    height: 150px;
+    padding-top: 10px;
+}
+.navLink li{
+    float: left;
+    position: relative;
+    width: 25%;
+    height: inherit;
+}
+.navLink li span{
+    display: block;
+    width: 24px;
+    height: 134px;
+    margin: 0 auto;
+    transition: margin-top .5s;
+}
+.navLink li.list-01 span{
+    background-position: 214px -316px;
+}
+.navLink li.list-02 span{
+    background-position: 250px -466px;
+}
+.navLink li.list-03 span{
+    background-position: 238px -316px;
+}
+.navLink li.list-04 span{
+    background-position: 190px -316px;
+}
+.navLink li i{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 11px;
+    height: 100%;
+    background-position: 263px -315px;
+}
+.navLink li:hover span{
+    margin-top: -10px;
+}
+/*start rightPart*/
+.rightPart{
+    float: right;
+    width: 782px;
+    height: inherit;
+    overflow: hidden;
+}
+.rightPart .title{
+    display: flex;
+    align-items: center;
+    height: 95px;
+    padding: 75px 0 10px;
+    border-bottom: 1px solid #ddd;
+}
+.rightPart .title a.bg{
+    width: 134px;
+    height: 85px;
+    background-position: 523px 259px;
+}
+.rightPart .title a.list{
+    position: relative;
+    width: 96px;
+    height: 90px;
+    background-position: -1422px -153px;
+    vertical-align: top;
+    text-align: center;
+    cursor: pointer;
+}
+.rightPart .title .tab i{
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: 619px 258px;
+    opacity: 0;
+    transition: top .5s,opacity .5s;
+}
+.rightPart .title .tab span{
+    position: absolute;
+    top: 0;right: 0;
+    bottom: 0;left: 0;
+    margin: auto;
+}
+.rightPart .title .tab .tab1{
+    width: 69px;
+    height: 39px;
+    background-position: 158px -755px;
+}
+.rightPart .title .tab .tab2{
+    width: 69px;
+    height: 32px;
+    background-position: 157px 558px;
+}
+.rightPart .title .tab .tab3{
+    width: 74px;
+    height: 35px;
+    background-position: 158px -795px;
+}
+.rightPart .title .tab .tab4{
+    width: 80px;
+    height: 31px;
+    background-position: 319px 563px;
+}
+.rightPart .title .dotted{
+    width: 44px;
+    height: 4px;
+    margin: 0 10px;
+    background-position: -1422px -153px;
+    vertical-align: middle;
+}
+.rightPart .title .tab.on i{
+    top: 4px;
+    opacity: 1;
+}
+/*start show*/
+.rightPart .show{
+    position: relative;
+    width: 1100%;
+    height: 300px;
+    padding-top: 28px;
+    overflow: hidden;
+}
+.rightPart .show ul{
+    float: left;
+    width: 10%;
+    height: 300px;
+}
+.rightPart .show li{
+    float: left;
+    position: relative;
+    width: 342px;
+    height: 48px;
+    margin-right: 56px;
+    margin-top: 10px;
+    padding-left: 15px;
+    border-bottom: 1px dotted #333;
+    font-size: 14px;
+}
+.rightPart .show li i{
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 0;
+    height: 0;
+    border-left: 7px solid #333;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+}
+.rightPart .show li .mTitle{
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #333;
+}
+.rightPart .show li .author{
+    color: #aaa;
+    line-height: 25px;
+}
+.rightPart .show li:hover .mTitle{
+    color: #c1831c;
+}
+/*start c-fan*/
+.c-fan{
+    width: 1200px;
+    height: 560px;
+    margin: 50px auto 0;
+}
+.c-fan .tab{
+    position: relative;
+    height: 110px;
+}
+.c-fan .tab .bg{
+    float: left;
+    width: 112px;
+    height: 106px;
+    background-position: 630px 890px;
+}
+.c-fan .tab .line{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: inherit;
+    border-bottom: 2px solid #000;
+}
+.c-fan .tab .tabBar{
+    position: absolute;
+    right: 0;
+    width: 1062px;
+    height: 89px;
+    overflow: hidden;
+}
+.c-fan .tab li{
+    position: relative;
+    float: left;
+    width: 14.69%;
+    height: 87px;
+}
+.c-fan .tab li a{
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    border-right: 1px dotted #000;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+}
+.c-fan .tab li.list-06 a{
+    border-right: none;
+}
+.c-fan .tab li span{
+    position: absolute;
+    top: 18px;
+    left: 0;
+    width: inherit;
+    transition: top .5s;
+}
+.c-fan .tab li i{
+    position: absolute;
+    left: 0;
+    bottom: -82px;
+    width: inherit;
+    height: 54px;
+    background-image: url("../img/index/fan/icons.png");
+    transition: bottom .5s;
+}
+.c-fan .tab li.list-01 i{
+    background-position: 0 0;
+}
+.c-fan .tab li.list-02 i{
+    background-position: -166px 0;
+}
+.c-fan .tab li.list-03 i{
+    background-position: -317px 0;
+}
+.c-fan .tab li.list-04 i{
+    background-position: -476px 0;
+}
+.c-fan .tab li.list-05 i{
+    background-position: -628px 0;
+}
+.c-fan .tab li.list-06 i{
+    background-position: -922px 0;
+}
+.c-fan .tab li.on span{
+    top: 0;
+}
+.c-fan .tab li.on i{
+    bottom: -30px
+}
+.c-fan .tab .goLink{
+    position: absolute;
+    top: 28px;
+    right: 0;
+    width: 101px;
+    height: 24px;
+    background-position: -930px -608px;
+    transition: right .5s;
+}
+.c-fan .tab .goLink:hover{
+    right: -10px;
+}
+/*start show*/
+.fanShow{
+    overflow: hidden;
+}
+.c-fan .show{
+    position: relative;
+    top: 30px;
+    left: 0;
+    width: 1020%;
+    height: 430px;
+}
+.c-fan .show ul{
+    float: left;
+    width: 10%;
+    height: inherit;
+}
+.c-fan .show li{
+    float: left;
+    width: 285px;
+    height: 210px;
+    margin-right: 20px;
+}
+.c-fan .show li a{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 163px;
+}
+.c-fan .show li img{
+    width: 100%;
+    height: 100%;
+}
+.c-fan .show li span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    background-color: rgba(0,0,0,.5);
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity .5s;
+}
+.c-fan .show li label{
+    position: absolute;
+    top: 0;right: 0;
+    bottom: 0;left: 0;
+    width: 79px;
+    height: 93px;
+    margin: auto;
+    background-position: -679px -474px;
+    cursor: pointer;
+}
+.c-fan .show li p{
+    line-height: 42px;
+    color: #666;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.c-fan .show li a:hover span{
+    opacity: 1;
+}
+/*start c-video*/
+.c-video{
+    height: 514px;
+    background: url(../img/index/video/video_bg.jpg) top center no-repeat;
+    margin-top: 60px;
+}
+.video-box{
+    width: 1200px;
+    margin: 0 auto;
+}
+.video-box .item{
+    position: relative;
+    top: 56px;
+    width: 560px;
+    height: 430px;
+}
+.video-box .item ul{
+    height: inherit;
+    margin-right: -20px;
+}
+.video-box .item li{
+    float: left;
+    width: 270px;
+    height: 200px;
+    margin: 0 20px 18px 0;
+    background-color: #fff;
+    overflow: hidden;
+}
+.video-box .item li img{
+    width: 100%;
+    height: 154px;
+    transition: transform .5s;
+}
+.video-box .item li p{
+    width: 100%;
+    line-height: 45px;
+    text-indent: 12px;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.video-box .item li.list-01{
+    background-color: transparent;
+}
+.video-box .leftVideo li.list-01 a{
+    width: 227px;
+    height: 150px;
+    background-position: -1079px -466px;
+}
+/*start rightVideo*/
+.video-box .rightVideo li.list-01 a{
+    background-position: -1107px -614px;
+    width: 220px;
+    height: 148px;
+}
+.video-box .item li:hover img{
+    transform: scale(1.06);
+}
+/*start c-activity*/
+.c-activity{
+    width: 1200px;
+    height: 375px;
+    margin: 60px auto 0;
+}
+.c-activity .left{
+    position: relative;
+    width: 225px;
+    height: inherit;
+}
+.c-activity .left img{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.c-activity ul{
+    width: 960px;
+    height: inherit;
+    margin-right: -50px;
+}
+.c-activity ul li{
+    position: relative;
+    float: left;
+    width: 270px;
+    height: 153px;
+    margin: 0 50px 40px 0;
+    overflow: hidden;
+}
+.c-activity ul li img{
+    width: inherit;
+    height: inherit;
+    transition: transform .5s;
+}
+.c-activity ul li p{
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    padding: 5px;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 14px;
+}
+.c-activity ul li:hover img{
+    transform: scale(1.06);
+}
+/*start c-contact*/
+.c-contact{
+    position: relative;
+    width: 1200px;
+    height: 235px;
+    margin: 62px auto 0;
+}
+.c-contact ul{
+    width: inherit;
+    height: inherit;
+}
+.c-contact li{
+    float: left;
+    position: relative;
+    margin-right: 116px;
+}
+.c-contact .list-01{
+    width: 70px;
+    height: inherit;
+    background: url('../img/index/logo.png') no-repeat center top;
+}
+.c-contact .qrd{
+    width: 270px;
+    height: 178px;
+    padding-top: 20px;
+    background-color: #f6f6f6;
+}
+.c-contact .qrd .p1,
+.c-contact .qrd .p2,
+.c-contact .qrd .p3{
+    float: left;
+}
+.c-contact .qrd .p1,
+.c-contact .qrd .p2{
+    width: 16px;
+    font-size: 15px;
+    line-height: 17px;
+}
+.c-contact .qrd .p1{
+    margin-left: 30px;
+}
+.c-contact .qrd .p2,
+.c-contact .qrd .p3{
+    margin-left: 10px;
+}
+.c-contact .qrd .p3{
+    width: 22px;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 24px;
+}
+.c-contact .qrd .p4{
+    position: absolute;
+    bottom: 10px;
+    left: 30px;
+    line-height: 35px;
+    color: #d2c199;
+}
+.c-contact .qrd .p4 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 53px;
+    height: 2px;
+    background: #ccc;
+}
+.c-contact .qrd .img{
+    position: absolute;
+    top: -32px;
+    right: -32px;
+    width: 122px;
+    height: 122px;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+.c-contact .qrd .img img{
+    width: inherit;
+    height: inherit;
+}
+.c-contact .list-04{
+    width: 160px;
+    height: 230px;
+    margin-top: -32px;
+    margin-right: 0;
+    font-size: 14px;
+}
+.c-contact .list-04 i{
+    display: block;
+    width: 109px;
+    height: 109px;
+    background-position: -570px -474px;
+}
+.c-contact .list-04 .p1{
+    margin-top: 20px;
+}
+.c-contact .list-04 .p2{
+    font-size: 20px;
+    font-family: Georgia, "Microsoft Yahei", serif;
+}
+.c-contact .list-04 .p3{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    line-height: 35px;
+}
+.c-contact .list-04 .p3 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 53px;
+    height: 2px;
+    background: #ccc;
+}
+.c-contact .list-04 .p3 a{
+    color: #d2c199;
+}
+/*start goTop*/
+.goTop{
+    position: absolute;
+    right: -40px;
+    top: 15px;
+    width: 24px;
+    height: 112px;
+    background-position: 203px -466px;
+    cursor: pointer;
+    transition: top .5s;
+}
+.goTop:hover{
+    top: 0;
+}
+/*start footer*/
+#footer{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 524px;
+    background: url(../img/index/foot.jpg) top center no-repeat;
+    margin-top: 38px;
+}
+#footer .p1{
+    position: relative;
+    top: 110px;
+    width: 591px;
+    height: 29px;
+    background-position: 897px 407px;
+    margin: 0 auto;
+}
+#footer .btn{
+    width: 300px;
+    margin: 165px auto 0;
+    cursor: pointer;
+}
+#footer .btn .p2{
+    width: 116px;
+    height: 23px;
+    margin: 0 auto;
+    background-position: -930px -632px;
+    opacity: 1;
+    transition: .8s;
+}
+#footer .btn .p3{
+    position: relative;
+    top: 0;
+    width: 22px;
+    height: 71px;
+    background-position: 158px -81px;
+    margin: 31px auto 0;
+    transition: .8s;
+}
+#footer .p4 {
+    position: relative;
+    width: 237px;
+    height: 212px;
+    background-position: -331px -363px;
+    margin: 30px auto 0;
+    top: 0;
+    transition: .8s;
+}
+#footer .qrd {
+    position: absolute;
+    left: 50%;
+    top: 240px;
+    width: 200px;
+    height: 160px;
+    margin-left: -75px;
+    opacity: 0;
+    transition: .8s;
+}
+#footer .qrd .pic{
+    float: left;
+    width: 154px;
+    height: 154px;
+    margin-top: 3px;
+    box-shadow: 0 0 25px #67baeb;
+}
+#footer .qrd .pic img{
+    width: 100%;
+    height: 100%;
+}
+#footer .qrd .txt{
+    float: right;
+    width: 16px;
+    height: 160px;
+    background-position: 278px -311px;
+}
+#footer .btn:hover .p2{
+    opacity: 0;
+}
+#footer .btn:hover .p3{
+    top: -80px;
+}
+#footer .btn:hover .qrd{
+    opacity: 1;
+    top: 220px;
+}
+#footer .btn:hover .p4{
+    top: 40px;
+}

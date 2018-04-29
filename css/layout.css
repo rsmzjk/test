@@ -1,0 +1,64 @@
+@charset "UTF-8";
+/**
+ *
+ * @authors Your Name (you@example.org)
+ * @date    2018-04-20 16:43:45
+ * @version $Id$
+ */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0}
+ol,ul{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+q:before,q:after{content:''}
+input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}
+input,textarea,select{*font-size:100%}
+img{border: 0;vertical-align: middle;}
+body{
+    height: 100%;
+    background:#fff;
+    color:#000;
+    font-size:16px;
+    font-family: 'Microsoft yahei',Verdana, Arial, Helvetica, sans-serif;
+}
+/* width */
+.w1280{width: 1280px;margin: 0 auto;}
+.w1130{width: 1130px;margin: auto;}
+a{color: inherit; text-decoration: none;}
+/* float */
+.fl{float: left;}
+.fr{float: right;}
+/* clear float */
+.clearfix:after {
+    content: ".";
+    display: block;
+    height:0;
+    clear:both;
+    visibility: hidden;
+}
+.clearfix { *zoom:1; }
+
+/*start index same i*/
+.menu li.line,
+.download .show,
+.downloadMain .close,
+.downloadMain .bg,
+.downloadMain .downLink a,
+.side-bar li,
+.newinfo .tab li em,
+.c-role .title span,
+.formula-item .btn,
+.navLink li span,
+.rightPart .title a.bg,
+.rightPart .title span,
+.c-fan .tab span.bg,
+.c-fan .tab .goLink,
+.c-fan .show li label,
+.video-box .item li.list-01 a,
+.goTop,
+#footer p,
+#footer .qrd .txt,
+i{
+    display: block;
+    background-image: url('../img/index/index.png');
+}
